@@ -1,0 +1,310 @@
+/* #Tablet (Portrait) [ 960px ]
+================================================== */
+@media only screen and (max-width: 1025px) {		
+	#wrapper{ margin-bottom:0; margin-top:0; }
+	
+	.digita_social{ top:105px; }
+	
+	/*header*/
+	#header{ text-align:center; height:100px; }
+	#header .left_menu { display: none; }
+	#header .right_menu { display: none; }
+	#header .responsive-menu{ display:block; }
+	#header #logo{ float:none; display:inline-block; }
+	
+	/*zooblog*/
+	#wrapper .zooblog-grid .zooblog-grid-list .zoo-content .zoo-img img { width:100%; }
+	.zooblog-grid .zooblog-grid-list .zoo-author{ width:100% !important; }
+	.zooblog-grid .zooblog-grid-list .zoo-content{ width:100% !important; }
+	
+	.home-template1 #footer{ position:fixed;}
+		
+}
+
+	
+	
+/* #Tablet (Portrait) [ 768px ]
+================================================== */
+@media only screen and (min-width: 768px) and (max-width: 789px) {		
+	#wrapper{ margin-bottom:0; margin-top:0; }
+	
+	.digita_social{ top:105px; }
+	
+	/*header*/
+	#header{ text-align:center; height:100px; }
+	#header .left_menu { display: none; }
+	#header .right_menu { display: none; }
+	#header .responsive-menu{ display:block; }
+	#header #logo{ float:none; display:inline-block; }
+	
+	/*zooblog*/
+	.zooblog-grid .zooblog-grid-list .zoo-author{ width:100% !important; }
+	.zooblog-grid .zooblog-grid-list .zoo-content{ width:100% !important; }
+	
+	/*zoogallery*/
+	#main.gallery-template #main-inner .zoogallery-lists .zoogallery-archive-list.zoogallery_cl_4 { width:33.3334%; }
+	
+	.home-template1 #footer{ position:fixed;}
+		
+}
+	
+	
+	
+/*  #Mobile (Portrait) [ 320px ]
+================================================== */
+@media only screen and (max-width: 767px) {
+	.col-holder .col{ margin-left:0; }
+	.col-holder .col_1,
+	.col-holder .col_2,
+	.col-holder .col_3,
+	.col-holder .col_4,
+	.col-holder .col_5,
+	.col-holder .col_6,
+	.col-holder .col_7,
+	.col-holder .col_8,
+	.col-holder .col_9,
+	.col-holder .col_10,
+	.col-holder .col_11,
+	.col-holder .col_12{ width: 100%; *width: 99.94680851063829%; margin-bottom:30px; }
+	
+	
+	.cl_holder{ margin-left:0; }
+	.cl{ margin-left:0; float:left; margin-bottom:30px; }
+	.cl_1,
+	.cl_2,
+	.cl_3,
+	.cl_4,
+	.cl_5,
+	.cl_6{ width: 100%; *width: 99.94680851063829%; }
+	
+	
+	#wrapper{ margin-bottom:0; margin-top:0; }
+	
+	#topbar,
+	.social_icons,
+	#header,
+	#title,
+	#title .breadcrumbs,
+	#footer,
+	#footer .powerd_text{ text-align:center; }
+	
+	#title .breadcrumbs,
+	#footer .powerd_text,
+	.social_icons{ display:block; }
+	
+	.digita_social{ display:none; }
+	
+	
+	/*Home One*/
+	#main-home-1 .zoo-inner{ width:92%; margin-left:auto; margin-right:auto; }
+	.home-template1 #footer{ position:relative;}
+	#main-home-1 .zoo-inner .zoo-icon{ display:none; }
+	#main-home-1 .zoo-inner .zoo-name{ width:100%; }
+	
+	
+	
+	/*header*/
+	#header{ text-align:center; height:100px; }
+	#header .left_menu { display: none; }
+	#header .right_menu { display: none; }
+	#header .responsive-menu{ display:block; }
+	#header #logo{ float:none; display:inline-block; }
+	
+	/*zoobackground*/
+	html body #nextslide{ display:none !important; }
+	html body #prevslide{ display:none !important; }
+	
+	/*zooblog*/
+	.zooblog-grid .zooblog-grid-list .zoo-author{ display:none; }
+	.zooblog-grid .zooblog-grid-list .zoo-content{ width:100% !important; }
+	
+	/*zoogallery*/
+	#main.gallery-template #main-inner .zoogallery-lists .zoogallery-archive-list.zoogallery_cl_4 { width:100%; }
+
+}
+
+	
+	
+/* #Mobile (Landscape) [ 480px ]
+================================================== */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	/*zoogallery*/
+	#main.gallery-template #main-inner .zoogallery-lists .zoogallery-archive-list.zoogallery_cl_4 { width:50%; }
+}
+
+
+
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    SHORTCODES
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/* #Tablet (Portrait) [ 768px ]
+================================================== */
+@media only screen and (min-width: 768px) and (max-width: 789px) {		
+	#wrapper{ margin-bottom:0; margin-top:0; }
+	
+	#main-nav select{ display:block; float:right; width:70%; margin-top:0; }
+	#main-nav ul{ display:none; }
+		
+}
+	
+	
+	
+/*  #Mobile (Portrait) [ 320px ]
+================================================== */
+@media only screen and (max-width: 767px) {
+	.one_half {width: 100%;}
+	.one_third {width: 100%;}
+	.two_third {width: 100%;}
+	.one_fourth {width: 100%;}
+	.two_fourth {width: 100%;}
+	.three_fourth {width: 100%;}
+	.one_fifth {width: 100%;}
+	.two_fifth {width: 100%;}
+	.three_fifth {width: 100%;}
+	.four_fifth {width: 100%;}
+	.one_sixth {width: 100%;}
+	.two_sixth {width: 100%;}
+	.three_sixth {width: 100%;}
+	.four_sixth {width: 100%;}
+	.five_sixth {width: 100%;}
+
+	/* Two level columns */
+	.one_half .one_half {margin-right: 0;width: 100%;}
+	.one_half .one_third {margin-right: 0;width: 100%;}
+	.one_half .two_third {margin-right: 0;width: 100%;}
+	.two_third .one_third {margin-right: 0;width: 100%;}
+	.two_third .two_third {margin-right: 0;width: 100%;}
+	.two_third .one_fourth {margin-right: 0;width: 100%;}
+}
+
+	
+	
+/* #Mobile (Landscape) [ 480px ]
+================================================== */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	
+}
+
+
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    PORTFOLIO
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/* #Tablet (Portrait)
+================================================== */
+/* Note: Design for a width of 768px */
+@media only screen and (min-width: 768px) and (max-width: 959px) {		
+	.zooportfolio_cl_2{ width:47%; }
+	.zooportfolio_cl_3{ width:30.33333%; }
+	.zooportfolio_cl_4{ width:30.33333%; }
+	.zooportfolio_cl_5{ width:30.33333%; }
+}
+
+	
+/*  #Mobile (Portrait)
+================================================== */
+/* Note: Design for a width of 320px */
+@media only screen and (max-width: 767px) {
+	.zooportfolio_cl_2{ width:97%; }
+	.zooportfolio_cl_3{ width:97%; }
+	.zooportfolio_cl_4{ width:97%; }
+	.zooportfolio_cl_5{ width:97%; }
+	.zooportfolio-single .zooportfolio_media{ float:left; width:100%; }
+	.zooportfolio-single .zooportfolio_sidebar{ float:left; width:100%; margin-left:0; }
+}
+	
+
+/* #Mobile (Landscape)
+================================================== */
+/* Note: Design for a width of 480px */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	.zooportfolio_cl_2{ width:97%; }
+	.zooportfolio_cl_3{ width:97%; }
+	.zooportfolio_cl_4{ width:97%; }
+	.zooportfolio_cl_5{ width:97%; }
+	.zooportfolio-single .zooportfolio_media{ float:left; width:100%; }
+	.zooportfolio-single .zooportfolio_sidebar{ float:left; width:100%; margin-left:0; }
+}
+
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    GALLERY
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/* #Tablet (Portrait)
+================================================== */
+/* Note: Design for a width of 768px */
+@media only screen and (min-width: 768px) and (max-width: 959px) {		
+	.zoogallery_cl_2{ width:47%; }
+	.zoogallery_cl_3{ width:30.33333%; }
+	.zoogallery_cl_4{ width:30.33333%; }
+	.zoogallery_cl_5{ width:30.33333%; }
+	.zoogallery_cl_6{ width:30.33333%; }
+	.zoogallery_cl_7{ width:30.33333%; }
+	.zoogallery_cl_8{ width:30.33333%; }
+}
+
+	
+/*  #Mobile (Portrait)
+================================================== */
+/* Note: Design for a width of 320px */
+@media only screen and (max-width: 767px) {
+	.zoogallery_cl_2{ width:97%; }
+	.zoogallery_cl_3{ width:97%; }
+	.zoogallery_cl_4{ width:97%; }
+	.zoogallery_cl_5{ width:47%; }
+	.zoogallery_cl_6{ width:47%; }
+	.zoogallery_cl_7{ width:47%; }
+	.zoogallery_cl_8{ width:47%; }
+}
+	
+
+/* #Mobile (Landscape)
+================================================== */
+/* Note: Design for a width of 480px */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	.zoogallery_cl_2{ width:97%; }
+	.zoogallery_cl_3{ width:47%; }
+	.zoogallery_cl_4{ width:47%; }
+	.zoogallery_cl_5{ width:47%; }
+	.zoogallery_cl_6{ width:47%; }
+	.zoogallery_cl_7{ width:47%; }
+	.zoogallery_cl_8{ width:47%; }
+}
+
+
+
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    Flexslider
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+@media screen and (max-width: 860px) {
+  .zooflexslider2-flexslider .zooflex-direction-nav .zooflex-prev {opacity: 1; left: 0;}
+  .zooflexslider2-flexslider .zooflex-direction-nav .zooflex-next {opacity: 1; right: 0;}
+}
+
+
+.zooflexslider2-warp .zooflexslider2-li-content{ padding:2px; }
+.zooflexslider2-warp .zooflexslider2-li-content .zooflexslider2-li-media{ width:48%; float:left; margin-right:3%; }
+.zooflexslider2-warp .zooflexslider2-li-content .zooflexslider2-li-text{ width:49%; float:left; text-align:left; }
+
+.zooflexslider2-warp .zooflexslider2-video{ position: relative; overflow: hidden; height: 0;  padding-bottom: 56.25%; padding-top: 30px; }
+.zooflexslider2-warp .zooflexslider2-video iframe, 
+.zooflexslider2-warp .zooflexslider2-video object, 
+.zooflexslider2-warp .zooflexslider2-videoembed{ position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+/*caption style*/
+.zooflexslider2-flexslider-caption ul li{ position:relative; } 
+.zooflexslider2-warp .zoo-caption{ background:rgba(0,0,0,.8); position:absolute; left:50px; top:50px; width:300px; border-left:5px solid #0088cc; color:#CFCFCF;}
+.zooflexslider2-warp .zoo-caption .zoo-inner{ padding:20px; }
+.zooflexslider2-warp .zoo-caption h4{ color:#FFF; font-size:18px; margin-bottom:9px; }
+.zooflexslider2-warp .zoo-caption .zoo-more{ margin-top:10px; display:block; }
+
+
+
+/*  #Mobile (Portrait) [ 320px ]
+================================================== */
+@media only screen and (max-width: 767px) {
+	.zooflexslider2-warp .zooflexslider2-li-content .zooflexslider2-li-media{ width:100%; float:left; margin-right:0; }
+	.zooflexslider2-warp .zooflexslider2-li-content .zooflexslider2-li-text{ width:100%; float:left; text-align:left; }
+}
