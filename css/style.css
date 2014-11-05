@@ -55,6 +55,18 @@
 		word-wrap: break-word;
 	}
 	
+	body.bg1 {
+		background: #A2DFD7;
+	}
+
+	body.bg2 {
+		background: #56BFB8;
+	}
+	
+	body.bg3 {
+		background: #D4E3DE;
+	}
+	
 	#wrapper{ font-family:Open Sans; font-weight:400; font-style:normal; }
 
 /* OTHER
@@ -494,10 +506,9 @@
     .coming-soon {
         margin: auto;
         margin-top: 25%;
-        width: 50%;
+        width: 70%;
         font-size: 18px;
         color: #364f9b;
-        background-color: #e7e7e7;
     }
 
 /* SIDEBAR
@@ -551,7 +562,7 @@
 	#main-home-1 .zoo-inner .zoo-name a:hover{ text-decoration:none; }
 	#main-home-1 .zoo-inner .zoo-name img{ width:115px; height:115px; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; }
 	#main-home-1 .zoo-inner .zoo-name h3{ margin-bottom:0; margin-top:10px; font-size:36px; font-weight:bold; }
-	#main-home-1 .zoo-inner .zoo-title h1{ font-size:48px; font-weight:normal; color: #e3f85f; text-shadow: 0px 2px 7px rgba(0, 0, 0, 0.8); }
+	#main-home-1 .zoo-inner .zoo-title h1{ font-size:48px; font-weight:normal; color: #ffffff; text-shadow: 5px 5px 7px rgba(0, 0, 0, 0.9); }
 	#main-home-1 .zoo-inner .zoo-icon{ background:url(../images/home-1-icon.png) no-repeat; height:36px; width:36px; position:absolute; top:100px; left:235px; }
 	
 	.home-template1 #footer{ position:fixed; width:100%; bottom:0; left:0; }
