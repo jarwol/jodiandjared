@@ -1,18 +1,17 @@
 <!DOCTYPE HTML>
 <html lang="en-US" prefix="og: http://ogp.me/ns#">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-<link rel="icon" href="/favicon.ico" type="image/x-icon">
-<!--[if lt IE 9]>
-<script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
-<title>Jodi & Jared - Coming Soon!</title>
-<link rel="stylesheet" href="css/style.css" type="text/css" />
-<link rel="stylesheet" href="css/responsive.css" type="text/css" />
-<script type="text/javascript" src="js/jquery.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <!--[if lt IE 9]>
+    <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Jodi & Jared - Guestbook</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css"/>
+    <link rel="stylesheet" href="css/responsive.css" type="text/css"/>
 
 </head>
 <body class="home-template1 bg1">
@@ -61,9 +60,11 @@
             </div>
             <!-- ===== / END right menu area ===== -->
 
-        </div><!--#header-inner-->
-    </header><!--#header-->
-	
+        </div>
+        <!--#header-inner-->
+    </header>
+    <!--#header-->
+
     <!-- ========= Page Title area ============ -->
     <header id="title">
         <div id="title-inner">
@@ -73,41 +74,167 @@
                     <span class="sub-title"></span>
                 </div>
             </div>
-        </div><!--#title-inner-->
-    </header><!--#title-->
-    <!-- ========= / End Page Title area ============ -->
-	<!-- ========= Main Home 1 area ============ -->
-    <div id="main-home-1">
-        <div class="coming-soon">
-            Thanks for being proactive in your search for information on our wedding! This content is not yet ready, but
-            rest assured that we are working on it,
-            and everything will be ready soon.
         </div>
+        <!--#title-inner-->
+    </header>
+    <!--#title-->
+    <!-- ========= / End Page Title area ============ -->
+    <!-- ========= Main Home 1 area ============ -->
+    <div class="center-page guestbook">
+        <h2>Sign our guestbook!</h2>
+
+        <form id="guestbook">
+            <div>
+                <label for="name">Name</label><br/>
+                <input type="text" id="name" maxlength="50">
+                <span id="errName" class="form-error">Please enter your name</span>
+            </div>
+            <div>
+                <label for="comment">Comment</label><br/>
+                <textarea id="comment" maxlength="140"></textarea>
+                <span id="errComment" class="form-error">Please enter a comment</span>
+            </div>
+            <input type="submit" id="submit" value="Send">
+        </form>
     </div>
     <!-- ========= / END Main Home 1 area ============ -->
 
-<!-- ========= Footer area ============ -->
+    <!-- ========= Footer area ============ -->
     <footer id="footer">
         <div id="footer-inner">
             <div class="col-holder nomargin">
-            	
+
                 <!-- ===== start copyright ===== -->
                 <div class="col col_6">
                     <div class="copy_text">Copyright 2014</div>
                 </div>
                 <!-- ===== end copyright ===== -->
-                
-            </div>	
-        </div><!--#footer-inner-->
-    </footer><!--#footer-->
+
+            </div>
+        </div>
+        <!--#footer-inner-->
+    </footer>
+    <!--#footer-->
     <!-- /========= END of Footer area ============ -->
 
 </div>
 
-<!-- ========= Social Icon area ============ 
-<div class="digita_social">
-	<a href="#" class="zoosocial-link" target="_blank"><img src="images/social-icons/facebook.png" alt="Facebook" class="sh-sb-icon" /></a>
-</div><!--social_bar-->
+<script type="text/javascript" src="js/jquery.js"></script>
+<script src="//www.parsecdn.com/js/parse-1.3.1.min.js"></script>
+<script>
+    (function () {
+        var $ = jQuery;
+        var $wrapper = $("#wrapper");
+        var $form = $(".guestbook");
+        var $footer = $("#footer");
 
+        var minX = 10;
+        var maxX = $wrapper.width() - 250;
+        var minY = $("#header").height() + 25;
+        var maxY = $footer.position().top - 100;
+
+        var filledAreas = [{
+                               x : $form.position().left,
+                               y : $form.find("h2").position().top,
+                               width : $form.width(),
+                               height : $form.height() + $("#submit").height() + 5
+                           }];
+
+        Parse.initialize("6xvRTtVdegv66We9es9bgOjWuPDFvFr58dVM9qaN", "4Kd7dTB6RafIIHUjFtS4xlQm3D7vQxDzft2cHQdM");
+        var GuestbookEntry = Parse.Object.extend("GuestbookEntry");
+
+        $("#submit").click(submitForm);
+        $("#comment").keydown(submitForm);
+
+        $("#name").change(function () {
+            $("#errName").hide();
+        });
+
+        $("#comment").change(function () {
+            $("#errComment").hide();
+        });
+
+        new Parse.Query(GuestbookEntry).find({
+            success : function (entries) {
+                for (var i = 0; i < entries.length; i++) {
+                    addEntry(entries[i]);
+                }
+            },
+            error : function (err) {
+                console.error(err);
+            }
+        });
+
+        function submitForm(e) {
+            if (e.type === "keydown" && (e.which !== 13 || e.shiftKey)) {
+                return;
+            }
+            var name = $("#name").val().trim();
+            var comment = $("#comment").val().trim();
+            var valid = true;
+
+            if (name == "") {
+                $("#errName").show();
+                valid = false;
+            }
+            if (comment == "") {
+                $("#errComment").show();
+                valid = false;
+            }
+
+            if (!valid) {
+                e.preventDefault();
+                return false;
+            }
+
+            var entry = new GuestbookEntry({name : name, comment : comment});
+            entry.save().then(function () {
+                $("#name, #comment").val("");
+                addEntry(entry);
+            }, function (err) {
+                console.error("Error!" + err);
+            });
+            e.preventDefault();
+            return false;
+        }
+
+        function addEntry(entry) {
+            var $entry = $("<div class='entry'><div>" + entry.get("comment") + "</div><span class='by-line'> - " + entry.get("name") + "</span></div>");
+            $wrapper.append($entry);
+            var randX = 0;
+            var randY = 0;
+            var area;
+            do {
+                randX = Math.round(minX + ((maxX - minX) * (Math.random() % 1)));
+                randY = Math.round(minY + ((maxY - minY) * (Math.random() % 1)));
+                area = {x : randX, y : randY, width : $entry.width(), height : $entry.height()};
+            } while (checkOverlap(area));
+
+            filledAreas.push(area);
+
+            $entry.css({left : randX, top : randY}).addClass("fadeIn");
+        }
+
+        function checkOverlap(area) {
+            for (var i = 0; i < filledAreas.length; i++) {
+                var checkArea = filledAreas[i];
+
+                var bottom1 = area.y + area.height;
+                var bottom2 = checkArea.y + checkArea.height + 5;
+                var top1 = area.y;
+                var top2 = checkArea.y - 5;
+                var left1 = area.x;
+                var left2 = checkArea.x - 5;
+                var right1 = area.x + area.width;
+                var right2 = checkArea.x + checkArea.width + 5;
+                if (bottom1 < top2 || top1 > bottom2 || right1 < left2 || left1 > right2) {
+                    continue;
+                }
+                return true;
+            }
+            return false;
+        }
+    })();
+</script>
 </body>
 </html>
