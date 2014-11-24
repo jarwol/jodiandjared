@@ -54,7 +54,7 @@
 	}
 	
 	body.bg1 {
-		background: #2AC5C1;
+		background: #2ae8e4;
 	}
 
 	body.bg2 {
@@ -462,7 +462,7 @@ div.content {
 	/* The display of content is enabled using jQuery so that the slideshow content won't display unless javascript is enabled. */
 	display: none;
 	float: right;
-	width: 820px;
+	width: 60%;
 }
 div.content a, div.navigation a {
 	text-decoration: none;
@@ -487,7 +487,7 @@ div.nav-controls {
 div.slideshow-container {
 	position: relative;
 	clear: both;
-	height: 502px; /* This should be set to be at least the height of the largest image in the slideshow */
+	height: 605px; /* This should be set to be at least the height of the largest image in the slideshow */
 }
 div.loader {
 	position: absolute;
@@ -496,8 +496,8 @@ div.loader {
 	background-image: url('loader.gif');
 	background-repeat: no-repeat;
 	background-position: center;
-	width: 820px;
-	height: 502px; /* This should be set to be at least the height of the largest image in the slideshow */
+	width: 60%;
+	height: 605px; /* This should be set to be at least the height of the largest image in the slideshow */
 }
 
 div.slideshow span.image-wrapper {
@@ -508,9 +508,9 @@ div.slideshow span.image-wrapper {
 }
 div.slideshow a.advance-link {
 	display: block;
-	width: 820px;
-	height: 502px; /* This should be set to be at least the height of the largest image in the slideshow */
-	line-height: 502px; /* This should be set to be at least the height of the largest image in the slideshow */
+	width: 60%;
+	height: 605px; /* This should be set to be at least the height of the largest image in the slideshow */
+	line-height: 605px; /* This should be set to be at least the height of the largest image in the slideshow */
 	text-align: center;
 }
 div.slideshow a.advance-link:hover, div.slideshow a.advance-link:active, div.slideshow a.advance-link:visited {
@@ -529,7 +529,7 @@ div.caption-container {
 span.image-caption {
 	display: block;
 	position: absolute;
-	width: 820px;
+	width: 50%;
 	top: 0;
 	left: 0;
 }
@@ -605,6 +605,183 @@ div.pagination span.current {
 div.pagination span.ellipsis {
 	border: none;
 	padding: 5px 0 3px 2px;
+}
+
+.rg-image-wrapper{
+	position:relative;
+	padding:20px 30px;
+	background:transparent url(../images/black.png) repeat top left;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	min-height:20px;
+}
+
+.rg-image{
+	position:relative;
+	text-align:center;
+	line-height:0px;
+}
+
+.rg-image img{
+	max-height:100%;
+	max-width:100%;
+}
+
+.rg-image-nav a{
+	position:absolute;
+	top:0px;
+	left:0px;
+	background:#000 url(../images/nav.png) no-repeat -20% 50%;
+	width:28px;
+	height:100%;
+	text-indent:-9000px;
+	cursor:pointer;
+	opacity:0.3;
+	outline:none;
+	-moz-border-radius: 10px 0px 0px 10px;
+	-webkit-border-radius: 10px 0px 0px 10px;
+	border-radius: 10px 0px 0px 10px;
+}
+
+.rg-image-nav a.rg-image-nav-next{
+	right:0px;
+	left:auto;
+	background-position:115% 50%;
+	-moz-border-radius: 0px 10px 10px 0px;
+	-webkit-border-radius: 0px 10px 10px 0px;
+	border-radius: 0px 10px 10px 0px;
+}
+
+.rg-image-nav a:hover{
+	opacity:0.8;
+}
+
+.rg-caption {
+	text-align:center;
+	margin-top:15px;
+	position:relative;
+}
+.rg-caption p{
+	font-size:11px;
+	letter-spacing:2px;
+	font-family: 'Trebuchet MS', 'Myriad Pro', Arial, sans-serif;
+	line-height:16px;
+	padding:0 15px;
+	text-transform:uppercase;
+}
+
+.rg-view{
+	height:30px;
+}
+.rg-view a{
+	display:block;
+	float:right;
+	width:16px;
+	height:16px;
+	margin-right:3px;
+	background:#464646 url(../images/views.png) no-repeat top left;
+	border:3px solid #464646;
+	opacity:0.8;
+}
+.rg-view a:hover{
+	opacity:1.0;
+}
+.rg-view a.rg-view-full{
+	background-position:0px 0px;
+}
+.rg-view a.rg-view-selected{
+	background-color:#6f6f6f;
+	border-color:#6f6f6f;
+}
+.rg-view a.rg-view-thumbs{
+	background-position:0px -16px;
+}
+
+.rg-loading{
+	width:46px;
+	height:46px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	background:#000 url(../images/ajax-loader.gif) no-repeat center center;
+	margin:-23px 0px 0px -23px;
+	z-index:100;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	opacity:0.7;
+}
+
+/* Wedding weekend
+================================================== */
+#venue-map {
+	width: 40%;
+	height: 600px;
+	float: right;
+}
+
+.float-left {
+	float: left;
+}
+
+.float-right {
+	float: right;
+}
+
+#wedding {
+	width: 80%;
+	margin: 20px auto;
+	font-family: 'Raleway', sans-serif;
+}
+
+#wedding p {
+	font-size: large;
+	color: #2a2a54;
+}
+
+#wedding .info {
+	width: 50%;
+}
+
+#wedding a {
+	color: #9B3800;
+	font-weight: bold;
+}
+
+/* WEDDING PARTY
+================================================== */
+#wedding-party {
+	text-align: center;
+	width: 50%;
+	margin: 25px auto;
+}
+
+#wedding-party hr {
+	clear: both;
+	margin: 20px;
+}
+
+.party-member {
+	margin-top: 20px;
+	clear: both;
+	font-size: medium;
+}
+
+/* OUR STORY
+================================================== */
+#our-story {
+	width: 65%;
+	margin: 25px auto;
+	font-size: 16px;
+}
+
+#our-story div {
+	float: left;
+	width: 60%;
+}
+#our-story img {
+	float: right;
 }
 	
 /* SIDEBAR

@@ -9,9 +9,10 @@
 <!--[if lt IE 9]>
 <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
-<title>Jodi & Jared - Coming Soon!</title>
+<title>Jodi & Jared - The Wedding Weekend</title>
 <link rel="stylesheet" href="css/style.css" type="text/css" />
 <link rel="stylesheet" href="css/responsive.css" type="text/css" />
+<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 <script type="text/javascript" src="js/jquery.js"></script>
 
 </head>
@@ -77,12 +78,37 @@
     </header><!--#title-->
     <!-- ========= / End Page Title area ============ -->
 	<!-- ========= Main Home 1 area ============ -->
-    <div id="main-home-1">
-        <div class="center-page">
-            Thanks for being proactive in your search for information on our wedding! This content is not yet ready, but
-            rest assured that we are working on it,
-            and everything will be ready soon.
+    <div id="wedding">
+        <h1>Saturday, August 22nd, 2015</h1>
+        <div class="info float-left">
+            <h2>The Venue</h2>
+            <p>
+                <a href="http://watersiderestaurantandcatering.com">Waterside Restaurant</a><br/>
+                7800 River Rd<br/>
+                North Bergen, NJ 07047<br/>
+                (201) 861-7767<br/>
+            </p>
+            <p>
+                The ceremony will begin at 7:00pm, followed immediately by the reception at:
+            </p>
+            <br/>
+            <h2>Hotel Accommodations</h2>
+            <p>
+                <a href="http://www.sheratonlincolnharbor.com">Sheraton Lincoln Harbor Hotel</a><br/>
+                500 Harbor Blvd<br/>
+                Weehawken, NJ 07086<br/>
+                (201) 617-5600<br/>
+            </p>
+            <p>
+                We have reserved a block of rooms at the Sheraton Lincoln Harbor Hotel in Weehawken, NJ
+                - just a 10 minute drive from the venue.
+            </p>
+            <p>
+                Complimentary shuttle service will be provided to and from the wedding.  Please use the link below to book your room.<br/><br/>
+                <a href="https://www.starwoodmeeting.com/StarGroupsWeb/res?id=1411122890&key=1766A440">Book now</a>
+            </p>
         </div>
+        <div id="venue-map"></div>
     </div>
     <!-- ========= / END Main Home 1 area ============ -->
 
@@ -103,11 +129,40 @@
     <!-- /========= END of Footer area ============ -->
 
 </div>
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+<script>
+    var watersideLoc = new google.maps.LatLng(40.795952, -73.996317);
+    var sheratonLoc = new google.maps.LatLng(40.758776,-74.023744);
+    var directionsDisplay;
+    var directionsService = new google.maps.DirectionsService();
+    var map;
 
-<!-- ========= Social Icon area ============ 
-<div class="digita_social">
-	<a href="#" class="zoosocial-link" target="_blank"><img src="images/social-icons/facebook.png" alt="Facebook" class="sh-sb-icon" /></a>
-</div><!--social_bar-->
+    function initialize() {
+        directionsDisplay = new google.maps.DirectionsRenderer();
+        
+        var mapOptions = {
+            zoom: 14,
+            center: watersideLoc
+        }
+        map = new google.maps.Map(document.getElementById("venue-map"), mapOptions);
+        directionsDisplay.setMap(map);
+        calcRoute();
+    }
 
+    function calcRoute() {
+        var request = {
+            origin: sheratonLoc,
+            destination: watersideLoc,
+            travelMode: google.maps.TravelMode.DRIVING
+        };
+        directionsService.route(request, function(result, status) {
+            if (status == google.maps.DirectionsStatus.OK) {
+                directionsDisplay.setDirections(result);
+            }
+        });
+    }
+
+    google.maps.event.addDomListener(window, 'load', initialize);
+</script>
 </body>
 </html>
