@@ -12,26 +12,9 @@
     <title>Jodi & Jared - Pics</title>
     <link rel="stylesheet" href="css/style.css" type="text/css" />
     <link rel="stylesheet" href="css/responsive.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="css/elastislide.css" />
     <script type="text/javascript" src="js/jquery.js"></script>
-    <!--    <script type="text/javascript" src="js/jquery.galleriffic.min.js"></script> -->
-    <script id="img-wrapper-tmpl" type="text/x-jquery-tmpl"> 
-        <div class="rg-image-wrapper">
-            {{if itemsCount > 1}}
-                <div class="rg-image-nav">
-                    <a href="#" class="rg-image-nav-prev">Previous Image</a>
-                    <a href="#" class="rg-image-nav-next">Next Image</a>
-                </div>
-            {{/if}}
-            <div class="rg-image"></div>
-            <div class="rg-loading"></div>
-            <div class="rg-caption-wrapper">
-                <div class="rg-caption" style="display:none;">
-                    <p></p>
-                </div>
-            </div>
-        </div>
-    </script>
+    <script type="text/javascript" src="js/galleria-1.4.2.min.js"></script>
+   
 </head>
 <body class="home-template1 bg2">
 <div id="wrapper">
@@ -95,479 +78,59 @@
     </header><!--#title-->
     <!-- ========= / End Page Title area ============ -->
 	<!-- ========= Main Home 1 area ============ -->
-
-    <div id="rg-gallery" class="rg-gallery">
-        <div class="rg-thumbs">
-            <!-- Elastislide Carousel Thumbnail Viewer -->
-            <div class="es-carousel-wrapper">
-                <div class="es-nav">
-                    <span class="es-nav-prev">Previous</span>
-                    <span class="es-nav-next">Next</span>
-                </div>
-                <div class="es-carousel">
-                    <ul>
-                        <li><a href="#"><img src="images/thumbs/1.jpg" data-large="images/pics/1.jpg" alt="UMD Homecoming" data-description="UMD Homecoming" /></a></li>
-                        <li><a href="#"><img src="images/thumbs/2.jpg" data-large="images/pics/2.jpg" alt="Cancun '12" data-description="Cancun '12" /></a></li>
-                    </ul>
-                </div>
-            </div>
-            <!-- End Elastislide Carousel Thumbnail Viewer -->
-        </div><!-- rg-thumbs -->
-    </div><!-- rg-gallery -->
-    <!--
-    <div id="pics-content">
-        <div id="gallery" class="content">
-            <div id="controls" class="controls"></div>
-            <div class="slideshow-container">
-                <div id="loading" class="loader"></div>
-                <div id="slideshow" class="slideshow"></div>
-            </div>
-            <div id="caption" class="caption-container"></div>
-        </div>
-        <div id="thumbs" class="navigation">
-            <ul class="thumbs noscript">
-                <li>
-                    <a class="thumb" href="images/pics/1.jpg">
-                        <img alt="UMD Homecoming" src="images/thumbs/tn_1.jpg" />
-                    </a>
-                    <div class="caption">
-                        UMD homecoming
-                    </div>
-                </li>
-                <li>
-                    <a class="thumb" href="images/pics/2.jpg">
-                        <img src="images/thumbs/tn_2.jpg" />
-                    </a>
-                    <div class="caption">
-                        Cancun 2012
-                    </div>
-                </li>
-                <li>
-                    <a class="thumb" href="images/pics/3.jpg">
-                        <img src="images/thumbs/tn_3.jpg" />
-                    </a>
-                    <div class="caption">
-                        Public House before we were dating
-                    </div>
-                </li>
-                <li>
-                    <a class="thumb" href="images/pics/4.jpg">
-                        <img src="images/thumbs/tn_4.jpg" />
-                    </a>
-                    <div class="caption">
-                        Classic photo bomb, plus Zach and Jeremy
-                    </div>
-                </li>
-                <li>
-                    <a class="thumb" href="images/pics/5.jpg">
-                        <img src="images/thumbs/tn_5.jpg" />
-                    </a>
-                    <div class="caption">
-                        Jenna makes an appearance
-                    </div>
-                </li>
-                <li>
-                    <a class="thumb" href="images/pics/6.jpg">
-                        <img src="images/thumbs/tn_6.jpg" />
-                    </a>
-                    <div class="caption">
-                        Karen and Jill at our 14th St. apartment
-                    </div>
-                </li>
-                <li>
-                    <a class="thumb" href="images/pics/7.jpg">
-                        <img src="images/thumbs/tn_7.jpg" />
-                    </a>
-                    <div class="caption">
-                        Laurie's birthday at Amy and Jon's
-                    </div>
-                </li>
-                <li>
-                    <a class="thumb" href="images/pics/8.jpg">
-                        <img src="images/thumbs/tn_8.jpg" />
-                    </a>
-                    <div class="caption">
-                        Señor Frog's - Myrtle Beach
-                    </div>
-                </li>
-                <li>
-                    <a class="thumb" href="images/pics/9.jpg">
-                        <img src="images/thumbs/tn_9.jpg" />
-                    </a>
-                    <div class="caption">
-                        New Years Eve '13 - Greenwich Village Country Club
-                    </div>
-                </li>
-                <li>
-                    <a class="thumb" href="images/pics/10.jpg">
-                        <img src="images/thumbs/tn_10.jpg" />
-                    </a>
-                    <div class="caption">
-                        Hudson Terrace w/ Zach and Jenna
-                    </div>
-                </li>
-                <li>
-                    <a class="thumb" href="images/pics/11.jpg">
-                        <img src="images/thumbs/tn_11.jpg" />
-                    </a>
-                    <div class="caption">
-                        Holding a nurse shark in Isla Mujeres
-                    </div>
-                </li>
-                <li>
-                    <a class="thumb" href="images/pics/12.jpg">
-                        <img src="images/thumbs/tn_12.jpg" />
-                    </a>
-                    <div class="caption">
-                        Dewey Beach Jam Sesh
-                    </div>
-                </li>
-                <li>
-                    <a class="thumb" href="images/pics/13.jpg">
-                        <img src="images/thumbs/tn_13.jpg" />
-                    </a>
-                    <div class="caption">
-                        Bloodies in Point Pleasant
-                    </div>
-                </li>
-                <li>
-                    <a class="thumb" href="images/pics/14.jpg">
-                        <img src="images/thumbs/tn_14.jpg" />
-                    </a>
-                    <div class="caption">
-                        Maryland in Manhattan
-                    </div>
-                </li>
-                <li>
-                    <a class="thumb" href="images/pics/15.jpg">
-                        <img src="images/thumbs/tn_15.jpg" />
-                    </a>
-                    <div class="caption">
-                        Hibachi in Myrtle Beach
-                    </div>
-                </li>
-                <li>
-                    <a class="thumb" href="images/pics/16.jpg">
-                        <img src="images/thumbs/tn_16.jpg" />
-                    </a>
-                    <div class="caption">
-                        Vodka ice cage w/ Mary and Jeff
-                    </div>
-                </li>
-                <li>
-                    <a class="thumb" href="images/pics/17.jpg">
-                        <img src="images/thumbs/tn_17.jpg" />
-                    </a>
-                    <div class="caption">
-                        Clubs in Cancun w/ Alyssa and Jono
-                    </div>
-                </li>
-                <li>
-                    <a class="thumb" href="images/pics/18.jpg">
-                        <img src="images/thumbs/tn_18.jpg" />
-                    </a>
-                    <div class="caption">
-                        Cycle for Survival fundraiser featuring Lisa
-                    </div>
-                </li>
-                <li>
-                    <a class="thumb" href="images/pics/19.jpg">
-                        <img src="images/thumbs/tn_19.jpg" />
-                    </a>
-                    <div class="caption">
-                        Maryland in Manhattan
-                    </div>
-                </li>
-                <li>
-                    <a class="thumb" href="images/pics/20.jpg">
-                        <img src="images/thumbs/tn_20.jpg" />
-                    </a>
-                    <div class="caption">
-                        Jodi's birthday at Solas
-                    </div>
-                </li>
-                <li>
-                    <a class="thumb" href="images/pics/21.jpg">
-                        <img src="images/thumbs/tn_21.jpg" />
-                    </a>
-                    <div class="caption">
-                        Cara and Adam's wedding
-                    </div>
-                </li>
-                <li>
-                    <a class="thumb" href="images/pics/22.jpg">
-                        <img src="images/thumbs/tn_22.jpg" />
-                    </a>
-                    <div class="caption">
-                        Cancun '13 - fresh out of the hospital
-                    </div>
-                </li>
-                <li>
-                    <a class="thumb" href="images/pics/23.jpg">
-                        <img src="images/thumbs/tn_23.jpg" />
-                    </a>
-                    <div class="caption">
-                        Rehearsal dinner for Rachel and Jason
-                    </div>
-                </li>
-                <li>
-                    <a class="thumb" href="images/pics/24.jpg">
-                        <img src="images/thumbs/tn_24.jpg" />
-                    </a>
-                    <div class="caption">
-                        St. Patty's Day w/ Vanessa and Amit
-                    </div>
-                </li>
-                <li>
-                    <a class="thumb" href="images/pics/25.jpg">
-                        <img src="images/thumbs/tn_25.jpg" />
-                    </a>
-                    <div class="caption">
-                        Maryland in Manhattan
-                    </div>
-                </li>
-                <li>
-                    <a class="thumb" href="images/pics/27.jpg">
-                        <img src="images/thumbs/tn_27.jpg" />
-                    </a>
-                    <div class="caption">
-                        Jenna's birthday at Tortilla Flats
-                    </div>
-                </li>
-                <li>
-                    <a class="thumb" href="images/pics/28.jpg">
-                        <img src="images/thumbs/tn_28.jpg" />
-                    </a>
-                    <div class="caption">
-                        Myrtle Beach
-                    </div>
-                </li>
-                <li>
-                    <a class="thumb" href="images/pics/29.jpg">
-                        <img src="images/thumbs/tn_29.jpg" />
-                    </a>
-                    <div class="caption">
-                        Playing cards in Cancun
-                    </div>
-                </li>
-                <li>
-                    <a class="thumb" href="images/pics/30.jpg">
-                        <img src="images/thumbs/tn_30.jpg" />
-                    </a>
-                    <div class="caption">
-                        Broadway at the Beach
-                    </div>
-                </li>
-                <li>
-                    <a class="thumb" href="images/pics/31.jpg">
-                        <img src="images/thumbs/tn_31.jpg" />
-                    </a>
-                    <div class="caption">
-                        Meredith and Brandon's wedding
-                    </div>
-                </li>
-                <li>
-                    <a class="thumb" href="images/pics/32.jpg">
-                        <img src="images/thumbs/tn_32.jpg" />
-                    </a>
-                    <div class="caption">
-                        Meredith and Brandon's wedding
-                    </div>
-                </li>
-                <li>
-                    <a class="thumb" href="images/pics/33.jpg">
-                        <img src="images/thumbs/tn_33.jpg" />
-                    </a>
-                    <div class="caption">
-                        Out on Karan's boat in Seattle
-                    </div>
-                </li>
-                <li>
-                    <a class="thumb" href="images/pics/34.jpg">
-                        <img src="images/thumbs/tn_34.jpg" />
-                    </a>
-                    <div class="caption">
-                        Dewey Beach w/ the Polovoys
-                    </div>
-                </li>
-                <li>
-                    <a class="thumb" href="images/pics/35.jpg">
-                        <img src="images/thumbs/tn_35.jpg" />
-                    </a>
-                    <div class="caption">
-                        The Royal Sands, Cancun
-                    </div>
-                </li>
-                <li>
-                    <a class="thumb" href="images/pics/36.jpg">
-                        <img src="images/thumbs/tn_36.jpg" />
-                    </a>
-                    <div class="caption">
-                        Marissa and Matt's Wedding
-                    </div>
-                </li>
-                <li>
-                    <a class="thumb" href="images/pics/37.jpg">
-                        <img src="images/thumbs/tn_37.jpg" />
-                    </a>
-                    <div class="caption">
-                        Catamaran to Isla Mujeres
-                    </div>
-                </li>
-                <li>
-                    <a class="thumb" href="images/pics/38.jpg">
-                        <img src="images/thumbs/tn_38.jpg" />
-                    </a>
-                    <div class="caption">
-                        Post-proposal at Puerto Madero
-                    </div>
-                </li>
-                <li>
-                    <a class="thumb" href="images/pics/39.jpg">
-                        <img src="images/thumbs/tn_39.jpg" />
-                    </a>
-                    <div class="caption">
-                        On the catamaran
-                    </div>
-                </li>
-                <li>
-                    <a class="thumb" href="images/pics/40.jpg">
-                        <img src="images/thumbs/tn_40.jpg" />
-                    </a>
-                    <div class="caption">
-                        Annapolis in 2009 for Cait's birthday
-                    </div>
-                </li>
-                <li>
-                    <a class="thumb" href="images/pics/41.jpg">
-                        <img src="images/thumbs/tn_41.jpg" />
-                    </a>
-                    <div class="caption">
-                        Beautiful day in Cancun
-                    </div>
-                </li>
-                <li>
-                    <a class="thumb" href="images/pics/42.jpg">
-                        <img src="images/thumbs/tn_42.jpg" />
-                    </a>
-                    <div class="caption">
-                        At 230 5th - where it all began
-                    </div>
-                </li>
-                <li>
-                    <a class="thumb" href="images/pics/43.jpg">
-                        <img src="images/thumbs/tn_43.jpg" />
-                    </a>
-                    <div class="caption">
-                        Our wonderful parents at the engagement party
-                    </div>
-                </li>
-                <li>
-                    <a class="thumb" href="images/pics/44.jpg">
-                        <img src="images/thumbs/tn_44.jpg" />
-                    </a>
-                    <div class="caption">
-                        Engagement party
-                    </div>
-                </li>
-                <li>
-                    <a class="thumb" href="images/pics/45.jpg">
-                        <img src="images/thumbs/tn_45.jpg" />
-                    </a>
-                    <div class="caption">
-                        The parents and Jay's prominent phone holster
-                    </div>
-                </li>
-                <li>
-                    <a class="thumb" href="images/pics/46.jpg">
-                        <img src="images/thumbs/tn_46.jpg" />
-                    </a>
-                    <div class="caption">
-                        Softball champions
-                    </div>
-                </li>
-                <li>
-                    <a class="thumb" href="images/pics/47.jpg">
-                        <img src="images/thumbs/tn_47.jpg" />
-                    </a>
-                    <div class="caption">
-                        Bashakill Winery with friends and a hippie clown
-                    </div>
-                </li>
-                <li>
-                    <a class="thumb" href="images/pics/48.jpg">
-                        <img src="images/thumbs/tn_48.jpg" />
-                    </a>
-                    <div class="caption">
-                        Cait and Anthony's wedding
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <div style="clear: both;"></div>
-    </div>-->
-    <!-- ========= / END Main Home 1 area ============ -->
-
-<!-- ========= Footer area ============ -->
-    <footer id="footer">
-        <div id="footer-inner">
-            <div class="col-holder nomargin">
-            	
-                <!-- ===== start copyright ===== -->
-                <div class="col col_6">
-                    <div class="copy_text">Copyright 2014</div>
-                </div>
-                <!-- ===== end copyright ===== -->
-                
-            </div>	
-        </div><!--#footer-inner-->
-    </footer><!--#footer-->
-    <!-- /========= END of Footer area ============ -->
-
+    <div class="galleria">
+        <a href="images/pics/1.jpg"><img src="images/thumbs/tn_1.jpg" data-title="UMD Homecoming"></a>
+        <a href="images/pics/2.jpg"><img src="images/thumbs/tn_2.jpg" data-title="Cancun 2012"></a>
+        <a href="images/pics/3.jpg"><img src="images/thumbs/tn_3.jpg" data-title="Public House pre-dating"></a>
+        <a href="images/pics/4.jpg"><img src="images/thumbs/tn_4.jpg" data-title="Classic photo bomb, plus Zach and Jeremy"></a>
+        <a href="images/pics/5.jpg"><img src="images/thumbs/tn_5.jpg" data-title="Jenna makes an appearance"></a>
+        <a href="images/pics/6.jpg"><img src="images/thumbs/tn_6.jpg" data-title="Karen and Jill at our 14th St. apartment"></a>
+        <a href="images/pics/7.jpg"><img src="images/thumbs/tn_7.jpg" data-title="Laurie's birthday at Amy and Jon's"></a>
+        <a href="images/pics/8.jpg"><img src="images/thumbs/tn_8.jpg" data-title="Señor Frog's - Myrtle Beach"></a>
+        <a href="images/pics/9.jpg"><img src="images/thumbs/tn_9.jpg" data-title="New Years Eve '13 - Greenwich Village Country Club"></a>
+        <a href="images/pics/10.jpg"><img src="images/thumbs/tn_10.jpg" data-title="Hudson Terrace w/ Zach and Jenna"></a>
+        <a href="images/pics/11.jpg"><img src="images/thumbs/tn_11.jpg" data-title="Holding a nurse shark in Isla Mujeres"></a>
+        <a href="images/pics/12.jpg"><img src="images/thumbs/tn_12.jpg" data-title="Dewey Beach Jam Sesh"></a>
+        <a href="images/pics/13.jpg"><img src="images/thumbs/tn_13.jpg" data-title="Bloodies in Point Pleasant"></a>
+        <a href="images/pics/14.jpg"><img src="images/thumbs/tn_14.jpg" data-title="Maryland in Manhattan"></a>
+        <a href="images/pics/15.jpg"><img src="images/thumbs/tn_15.jpg" data-title="Hibachi in Myrtle Beach"></a>
+        <a href="images/pics/16.jpg"><img src="images/thumbs/tn_16.jpg" data-title="Vodka ice cage w/ Mary and Jeff"></a>
+        <a href="images/pics/17.jpg"><img src="images/thumbs/tn_17.jpg" data-title="Clubs in Cancun w/ Alyssa and Jono"></a>
+        <a href="images/pics/18.jpg"><img src="images/thumbs/tn_18.jpg" data-title="Cycle for Survival fundraiser featuring Lisa"></a>
+        <a href="images/pics/19.jpg"><img src="images/thumbs/tn_19.jpg" data-title="Maryland in Manhattan"></a>
+        <a href="images/pics/20.jpg"><img src="images/thumbs/tn_20.jpg" data-title="Jodi's birthday at Solas"></a>
+        <a href="images/pics/21.jpg"><img src="images/thumbs/tn_21.jpg" data-title="Cara and Adam's wedding"></a>
+        <a href="images/pics/22.jpg"><img src="images/thumbs/tn_22.jpg" data-title="Cancun '13 - fresh out of the hospital"></a>
+        <a href="images/pics/23.jpg"><img src="images/thumbs/tn_23.jpg" data-title="Rehearsal dinner for Rachel and Jason"></a>
+        <a href="images/pics/24.jpg"><img src="images/thumbs/tn_24.jpg" data-title="St. Patty's Day w/ Vanessa and Amit"></a>
+        <a href="images/pics/25.jpg"><img src="images/thumbs/tn_25.jpg" data-title="Maryland in Manhattan"></a>
+        <a href="images/pics/27.jpg"><img src="images/thumbs/tn_27.jpg" data-title="Jenna's birthday at Tortilla Flats"></a>
+        <a href="images/pics/28.jpg"><img src="images/thumbs/tn_28.jpg" data-title="Myrtle Beach"></a>
+        <a href="images/pics/29.jpg"><img src="images/thumbs/tn_29.jpg" data-title="Playing cards in Cancun"></a>
+        <a href="images/pics/30.jpg"><img src="images/thumbs/tn_30.jpg" data-title="Broadway at the Beach"></a>
+        <a href="images/pics/31.jpg"><img src="images/thumbs/tn_31.jpg" data-title="Meredith and Brandon's wedding"></a>
+        <a href="images/pics/32.jpg"><img src="images/thumbs/tn_32.jpg" data-title="Meredith and Brandon's wedding"></a>
+        <a href="images/pics/33.jpg"><img src="images/thumbs/tn_33.jpg" data-title="Out on Karan's boat in Seattle"></a>
+        <a href="images/pics/34.jpg"><img src="images/thumbs/tn_34.jpg" data-title="Dewey Beach w/ the Polovoys"></a>
+        <a href="images/pics/35.jpg"><img src="images/thumbs/tn_35.jpg" data-title="The Royal Sands, Cancun"></a>
+        <a href="images/pics/36.jpg"><img src="images/thumbs/tn_36.jpg" data-title="Marissa and Matt's Wedding"></a>
+        <a href="images/pics/37.jpg"><img src="images/thumbs/tn_37.jpg" data-title="Catamaran to Isla Mujeres"></a>
+        <a href="images/pics/38.jpg"><img src="images/thumbs/tn_38.jpg" data-title="Post-proposal at Puerto Madero"></a>
+        <a href="images/pics/39.jpg"><img src="images/thumbs/tn_39.jpg" data-title="On the catamaran"></a>
+        <a href="images/pics/40.jpg"><img src="images/thumbs/tn_40.jpg" data-title="Annapolis in 2009 for Cait's birthday"></a>
+        <a href="images/pics/41.jpg"><img src="images/thumbs/tn_41.jpg" data-title="Beautiful day in Cancun"></a>
+        <a href="images/pics/42.jpg"><img src="images/thumbs/tn_42.jpg" data-title="At 230 5th - where it all began"></a>
+        <a href="images/pics/43.jpg"><img src="images/thumbs/tn_43.jpg" data-title="Our wonderful parents at the engagement party"></a>
+        <a href="images/pics/44.jpg"><img src="images/thumbs/tn_44.jpg" data-title="Engagement party"></a>
+        <a href="images/pics/45.jpg"><img src="images/thumbs/tn_45.jpg" data-title="The parents featuring Jay's prominent phone holster"></a>
+        <a href="images/pics/46.jpg"><img src="images/thumbs/tn_46.jpg" data-title="Softball champions"></a>
+        <a href="images/pics/47.jpg"><img src="images/thumbs/tn_47.jpg" data-title="Bashakill Winery with friends and a hippie clown"></a>
+        <a href="images/pics/48.jpg"><img src="images/thumbs/tn_48.jpg" data-title="Cait and Anthony's wedding"></a>
+    </div>
 </div>
-<script type="text/javascript" src="js/jquery.tmpl.min.js"></script>
-<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
-<script type="text/javascript" src="js/jquery.elastislide.js"></script>
-<script type="text/javascript" src="js/gallery.js"></script><!--
 <script>
-    jQuery(document).ready(function($) {
-        // We only want these styles applied when javascript is enabled
-        $('div.navigation').css({'width' : '35%', 'float' : 'left'});
-        $('div.content').css('display', 'block');
-
-        var gallery = $('#thumbs').galleriffic({
-            delay:                     3000, // in milliseconds
-            numThumbs:                 18, // The number of thumbnails to show page
-            preloadAhead:              40, // Set to -1 to preload all images
-            enableTopPager:            true,
-            enableBottomPager:         true,
-            maxPagesToShow:            7,  // The maximum number of pages to display in either the top or bottom pager
-            imageContainerSel:         '#slideshow', // The CSS selector for the element within which the main slideshow image should be rendered
-            controlsContainerSel:      '#controls', // The CSS selector for the element within which the slideshow controls should be rendered
-            captionContainerSel:       '#caption', // The CSS selector for the element within which the captions should be rendered
-            loadingContainerSel:       '#loading', // The CSS selector for the element within which should be shown when an image is loading
-            renderSSControls:          true, // Specifies whether the slideshow's Play and Pause links should be rendered
-            renderNavControls:         true, // Specifies whether the slideshow's Next and Previous links should be rendered
-            playLinkText:              'Play',
-            pauseLinkText:             'Pause',
-            prevLinkText:              'Previous',
-            nextLinkText:              'Next',
-            nextPageLinkText:          'Next &gt;',
-            prevPageLinkText:          '&lt; Prev',
-            enableHistory:             false, // Specifies whether the url's hash and the browser's history cache should update when the current slideshow image changes
-            enableKeyboardNavigation:  true, // Specifies whether keyboard navigation is enabled
-            autoStart:                 false, // Specifies whether the slideshow should be playing or paused when the page first loads
-            syncTransitions:           false, // Specifies whether the out and in transitions occur simultaneously or distinctly
-            defaultTransitionDuration: 1000, // If using the default transitions, specifies the duration of the transitions
-            onSlideChange:             undefined, // accepts a delegate like such: function(prevIndex, nextIndex) { ... }
-            onTransitionOut:           undefined, // accepts a delegate like such: function(slide, caption, isSync, callback) { ... }
-            onTransitionIn:            undefined, // accepts a delegate like such: function(slide, caption, isSync) { ... }
-            onPageTransitionOut:       undefined, // accepts a delegate like such: function(callback) { ... }
-            onPageTransitionIn:        undefined, // accepts a delegate like such: function() { ... }
-            onImageAdded:              undefined, // accepts a delegate like such: function(imageData, $li) { ... }
-            onImageRemoved:            undefined  // accepts a delegate like such: function(imageData, $li) { ... }
-        });
-    });
-</script>-->
+    Galleria.loadTheme('themes/classic/galleria.classic.min.js');
+    Galleria.run('.galleria', {height : .45});
+</script>
 </body>
 </html>
