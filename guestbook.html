@@ -97,30 +97,40 @@
             <input type="submit" id="submit" value="Send">
         </form>
     </div>
+    <div id="mobile-guestbook-entries"></div>
     <!-- ========= / END Main Home 1 area ============ -->
 </div>
 
 <script type="text/javascript" src="js/jquery.js"></script>
 <script src="//www.parsecdn.com/js/parse-1.3.1.min.js"></script>
 <script>
-    (function () {
-        var $ = jQuery;
-        var $wrapper = $("#wrapper");
-        var $form = $(".guestbook");
-        var $footer = $("#footer");
+    (function (w, d, $) {
+        var screenWidth = Math.max(d.documentElement.clientWidth, w.innerWidth || 0);
+        var screenHeight = Math.max(d.documentElement.clientHeight, w.innerHeight || 0);
+        var mobile = screenWidth < 992;
+        
+        if(mobile) {
+            $("#mobile-guestbook-entries").show();
+            addEntry = addEntryMobile;
+        }
+        else {
+            addEntry = addEntryLarge;
+            var $wrapper = $("#wrapper");
+            var $form = $("#guestbook");
 
-        var minX = 10;
-        var maxX = $wrapper.width() - 250;
-        var minY = $("#header").height() + 25;
-        var maxY = $footer.position().top - 100;
+            var minX = 10;
+            var maxX = screenWidth - 250;
+            var minY = $("#header").height() + 25;
+            var maxY = screenHeight - 250;
 
-        var filledAreas = [{
-                               x : $form.position().left,
-                               y : $form.find("h2").position().top,
-                               width : $form.width(),
-                               height : $form.height() + $("#submit").height() + 5
-                           }];
-
+            var filledAreas = [{
+                                   x : $form.position().left,
+                                   y : $form.parent().find("h2").position().top,
+                                   width : $form.width() + 50,
+                                   height : $(".guestbook") + $("#submit").height() + 5
+                               }];
+        }
+        
         Parse.initialize("6xvRTtVdegv66We9es9bgOjWuPDFvFr58dVM9qaN", "4Kd7dTB6RafIIHUjFtS4xlQm3D7vQxDzft2cHQdM");
         var GuestbookEntry = Parse.Object.extend("GuestbookEntry");
 
@@ -179,7 +189,13 @@
             return false;
         }
 
-        function addEntry(entry) {
+        function addEntryMobile(entry) {
+            var $entry = $("<div class='entry-mobile'><div>" + entry.get("comment") + "</div><span class='by-line'> - " + entry.get("name") + "</span></div>");
+            $("#mobile-guestbook-entries").prepend($entry);
+            $entry.addClass("fadeIn");
+        }
+
+        function addEntryLarge(entry) {
             var $entry = $("<div class='entry'><div>" + entry.get("comment") + "</div><span class='by-line'> - " + entry.get("name") + "</span></div>");
             $wrapper.append($entry);
             var randX = 0;
@@ -194,6 +210,30 @@
             filledAreas.push(area);
 
             $entry.css({left : randX, top : randY}).addClass("fadeIn");
+            
+            $entry.mouseenter(function (e) {
+                var scale = 2.0;
+                $(".entry").not(this).fadeOut(0.1);
+                $(this).css({
+                    '-webkit-transform' : 'scale(' + scale + ')',
+                    '-moz-transform'    : 'scale(' + scale + ')',
+                    '-ms-transform'     : 'scale(' + scale + ')',
+                    '-o-transform'      : 'scale(' + scale + ')',
+                    'transform'         : 'scale(' + scale + ')'
+                });
+            });
+
+            $entry.mouseleave(function (e) {
+                var scale = 1.0;
+                $(".entry").not(this).fadeIn(0.1);
+                $(this).css({
+                    '-webkit-transform' : 'scale(' + scale + ')',
+                    '-moz-transform'    : 'scale(' + scale + ')',
+                    '-ms-transform'     : 'scale(' + scale + ')',
+                    '-o-transform'      : 'scale(' + scale + ')',
+                    'transform'         : 'scale(' + scale + ')'
+                });
+            });
         }
 
         function checkOverlap(area) {
@@ -215,7 +255,7 @@
             }
             return false;
         }
-    })();
+    })(window, document, jQuery);
 </script>
 </body>
 </html>

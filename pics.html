@@ -129,8 +129,11 @@
     </div>
 </div>
 <script>
-    Galleria.loadTheme('themes/classic/galleria.classic.min.js');
-    Galleria.run('.galleria', {height : .45});
+    (function(w, d, $) {
+        var height = Math.max(d.documentElement.clientHeight, w.innerHeight || 0) - $("#header").height();
+        Galleria.loadTheme('themes/classic/galleria.classic.min.js');
+        Galleria.run('.galleria', {height : height});
+    })(window, document, jQuery);
 </script>
 </body>
 </html>

@@ -349,12 +349,48 @@
 		margin: 10% auto 0;
 		font-size: 18px;
 		color: #364f9b;
+		text-align: center;
+	}
+	
+	@media only screen and (min-width: 810px) {
+		img#family-pic-wide {
+			margin-top: 20px;
+			display: inline;
+		}
+		img#family-pic-mobile {
+			display: none;
+		}
 	}
 
-	/* Guest book */
+	@media only screen and (max-width: 809px) {
+		img#family-pic-wide {
+			display: none;
+		}
+		img#family-pic-mobile {
+			margin-top: 20px;
+			display: inline;
+		}
+	}
 	
-	.guestbook {
-		width: 300px;
+	
+	#family-caption {
+		font-size: smaller;
+	}
+
+/* GUESTBOOK
+================================================*/
+	
+	@media only screen and (min-width: 992px){
+		.guestbook {
+			width: 20%;
+		}
+	}
+
+	@media only screen and (max-width: 991px){
+		.guestbook {
+			width: 90%;
+			padding: 5%;
+		}
 	}
 	
 	#guestbook input[type=text], textarea {
@@ -375,16 +411,26 @@
 	.entry {
         position: absolute;
 		font-family: Menlo, serif;
-        font-size: large;
+        font-size: small;
 		visibility: hidden;
-        max-width: 250px;
+        max-width: 8vw;
         color: #364f9b;
+	}
+
+	.entry-mobile {
+		font-family: Menlo, serif;
+		font-size: 5vw;
+		visibility: hidden;
+		color: #364f9b;
+		margin: 25px auto 25px auto;
+		width: 75%;
 	}
     
     .by-line {
-        float: right;
+		width: 100%;
         text-align: right;
         font-style: italic;
+		color: black;
     }
     
     #submit {
@@ -397,6 +443,12 @@
         color: white;
         margin-top: 5px;
     }
+	
+	#mobile-guestbook-entries {
+		display: none;
+		clear: both;
+		margin: 55px auto;
+	}
 
 	.fadeIn{
 		animation-name: fadeIn;
