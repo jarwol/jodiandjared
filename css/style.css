@@ -207,8 +207,8 @@
 		text-decoration: none;
 	}
 	
-	#header .left_menu{ display:inline-block; float:left;  width:415px; text-align:right; }
-	#header .right_menu{ display:inline-block; float:left; width:415px; text-align:left; }
+	#header .left_menu{ display:inline-block; float:left;  width:40%; text-align:right; }
+	#header .right_menu{ display:inline-block; float:left; width:40%; text-align:left; }
 	
 /* Nav
 ================================================== */	
@@ -228,7 +228,7 @@
 		padding:0 10px 19px 10px;
 		text-decoration:none;
 		color:#bcb6b6;
-		font-size:12px;
+		font-size:0.85vw;
 		font-weight:400;
 		text-transform:uppercase;
 		
@@ -262,7 +262,7 @@
 		padding:8px 15px;
 		text-decoration:none;
 		color:#333333;
-		font-size:12px;
+		font-size:0.85vw;
 		font-weight:400;
 		text-transform:capitalize;
 		text-align: left;
@@ -281,9 +281,8 @@
 	.responsive-menu select{ width:92%; margin-bottom:0 !important;  }
 	
 	.main-nav a.current-page{
-        font-weight: bold;
         color: black;
-        font-size: 14px;
+        font-size: 1.0vw;
     }
 
 /* TITLE
@@ -346,7 +345,7 @@
 	#main .col-holder .col_9.page-content{ width:72.28571428571429%; }
 
 	.center-page {
-		margin: 10% auto 0;
+		margin: 5% auto 0;
 		font-size: 18px;
 		color: #364f9b;
 		text-align: center;
@@ -509,10 +508,29 @@
 
 /* Wedding weekend
 ================================================== */
-#venue-map {
-	width: 40%;
-	height: 500px;
-	float: right;
+@media only screen and (max-width: 991px) {
+	#venue-map {
+		width: 100%;
+		height: 300px;
+		margin-top: 30px;
+	}
+	
+	#wedding .info {
+		width: 100%;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	#venue-map {
+		width: 40%;
+		height: 500px;
+		float: right;
+	}
+
+	#wedding .info {
+		float: left;
+		width: 50%;
+	}
 }
 
 .float-left {
@@ -534,10 +552,6 @@
 	color: #2a2a54;
 }
 
-#wedding .info {
-	width: 50%;
-}
-
 #wedding a {
 	color: #9B3800;
 	font-weight: bold;
@@ -556,10 +570,24 @@
 	margin: 20px;
 }
 
-.party-member {
-	margin-top: 20px;
-	clear: both;
-	font-size: medium;
+@media only screen and (min-width: 992px) {
+	.party-member {
+		margin-top: 20px;
+		clear: both;
+		font-size: medium;
+	}
+}
+
+@media only screen and (max-width: 991px) {
+	.party-member {
+		margin: 40px auto;
+		float: none;
+		font-size: medium;
+	}
+
+	#wedding-party {
+		width: 90%;
+	}
 }
 
 /* OUR STORY

@@ -1,0 +1,26 @@
+{
+  "name": "jodiandjared",
+  "version": "1.0.0",
+  "description": "Jodi and Jared's wedding website",
+  "dependencies": {
+    "gulp-bundle-assets": "^2.15.2",
+    "gulp": "^3.8.10"
+  },
+  "devDependencies": {
+    "gulp-bundle-assets": "^2.15.2",
+    "gulp-replace": "^0.5.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jarwol/jodiandjared.git"
+  },
+  "author": "Jarwol",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jarwol/jodiandjared/issues"
+  },
+  "homepage": "https://github.com/jarwol/jodiandjared"
+}
