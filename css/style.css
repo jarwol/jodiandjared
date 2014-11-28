@@ -228,7 +228,7 @@
 		padding:0 10px 19px 10px;
 		text-decoration:none;
 		color:#bcb6b6;
-		font-size:0.85vw;
+		font-size:0.8vw;
 		font-weight:400;
 		text-transform:uppercase;
 		
@@ -262,7 +262,7 @@
 		padding:8px 15px;
 		text-decoration:none;
 		color:#333333;
-		font-size:0.85vw;
+		font-size:0.8vw;
 		font-weight:400;
 		text-transform:capitalize;
 		text-align: left;
@@ -282,7 +282,7 @@
 	
 	.main-nav a.current-page{
         color: black;
-        font-size: 1.0vw;
+        font-size: 0.9vw;
     }
 
 /* TITLE
@@ -412,7 +412,7 @@
 		font-family: Menlo, serif;
         font-size: small;
 		visibility: hidden;
-        max-width: 8vw;
+        max-width: 14vw;
         color: #364f9b;
 	}
 
