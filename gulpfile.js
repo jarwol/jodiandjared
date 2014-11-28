@@ -4,7 +4,7 @@ var gulp = require('gulp'),
     replace = require('gulp-replace');
 
 gulp.task('clean', function () {
-    return gulp.src('(js|css)/main-*.(js|css)')
+    return gulp.src(['js/main-*.js', 'css/main-*.css', '**/maps/*'])
         .pipe(clean());
 });
 
@@ -19,11 +19,5 @@ gulp.task('css', function() {
         .pipe(bundle())
         .pipe(gulp.dest('./css'));
 });
-/*
-gulp.task('replace', function(){
-    gulp.src('*.html')
-        .pipe(replace(/main-.+\.js/, '$1foo'))
-        .pipe(gulp.dest('build/file.txt'));
-});
-*/
+
 gulp.task('default', ['clean', 'js', 'css']);

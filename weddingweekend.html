@@ -1,17 +1,17 @@
 <!DOCTYPE HTML>
 <html lang="en-US" prefix="og: http://ogp.me/ns#">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-<link rel="icon" href="/favicon.ico" type="image/x-icon">
-<!--[if lt IE 9]>
-<script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
-<title>Jodi & Jared - The Wedding Weekend</title>
-    <link rel="stylesheet" href="css/main-cf0f52c8.css" type="text/css" />
-<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <!--[if lt IE 9]>
+    <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Jodi & Jared - The Wedding Weekend</title>
+    <link rel="stylesheet" href="css/main-57d0b0f2.css" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 </head>
 <body class="home-template1 bg1">
 <div id="wrapper">
@@ -29,7 +29,9 @@
                         <li><a href="pics.html">Pics</a></li>
                         <li><a href="#">Registry</a>
                             <ul class="sub-menu">
-                                <li><a href="http://www1.macys.com/registry/wedding/guest/?registryId=2191779">Macy's</a></li>
+                                <li>
+                                    <a href="http://www1.macys.com/registry/wedding/guest/?registryId=2191779">Macy's</a>
+                                </li>
                             </ul>
                         </li>
                         <li><a href="guestbook.html">Guestbook</a></li>
@@ -59,7 +61,8 @@
                     <li><a href="pics.html">Pics</a></li>
                     <li><a href="#">Registry</a>
                         <ul class="sub-menu">
-                            <li><a href="http://www1.macys.com/registry/wedding/guest/?registryId=2191779">Macy's</a></li>
+                            <li><a href="http://www1.macys.com/registry/wedding/guest/?registryId=2191779">Macy's</a>
+                            </li>
                         </ul>
                     </li>
                     <li><a href="guestbook.html">Guestbook</a></li>
@@ -67,9 +70,11 @@
             </div>
             <!-- ===== / END right menu area ===== -->
 
-        </div><!--#header-inner-->
-    </header><!--#header-->
-	
+        </div>
+        <!--#header-inner-->
+    </header>
+    <!--#header-->
+
     <!-- ========= Page Title area ============ -->
     <header id="title">
         <div id="title-inner">
@@ -79,39 +84,50 @@
                     <span class="sub-title"></span>
                 </div>
             </div>
-        </div><!--#title-inner-->
-    </header><!--#title-->
+        </div>
+        <!--#title-inner-->
+    </header>
+    <!--#title-->
     <!-- ========= / End Page Title area ============ -->
-	<!-- ========= Main Home 1 area ============ -->
+    <!-- ========= Main Home 1 area ============ -->
     <div id="wedding">
         <h1>Saturday, August 22nd, 2015</h1>
+
         <div class="info">
             <h2>The Venue</h2>
+
             <p>
                 <a href="http://watersiderestaurantandcatering.com">Waterside Restaurant</a><br/>
                 7800 River Rd<br/>
                 North Bergen, NJ 07047<br/>
                 (201) 861-7767<br/>
             </p>
+
             <p>
                 The ceremony will begin at 7:00pm, followed immediately by the reception.
             </p>
             <br/>
+
             <h2>Hotel Accommodations</h2>
+
             <p>
                 <a href="http://www.sheratonlincolnharbor.com">Sheraton Lincoln Harbor Hotel</a><br/>
                 500 Harbor Blvd<br/>
                 Weehawken, NJ 07086<br/>
                 (201) 617-5600<br/>
             </p>
+
             <p>
                 We have reserved a block of rooms at the Sheraton Lincoln Harbor Hotel in Weehawken, NJ
                 - just a 10 minute drive from the venue.
             </p>
+
             <p>
-                Complimentary shuttle service will be provided to and from the wedding.  Please use the link below to book your room.<br/><br/>
+                Complimentary shuttle service will be provided to and from the wedding. Please use the link below to
+                book your room.<br/><br/>
                 <a href="https://www.starwoodmeeting.com/StarGroupsWeb/res?id=1411122890&key=1766A440">Book now</a>
             </p>
+
             <p>
                 For guests staying overnight, there will be a brunch Sunday morning at the hotel.
             </p>
@@ -123,38 +139,56 @@
 <script src="js/main-0ab3a081.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js"></script>
 <script>
-    var watersideLoc = new google.maps.LatLng(40.795952, -73.996317);
-    var sheratonLoc = new google.maps.LatLng(40.758776,-74.023744);
-    var directionsDisplay;
-    var directionsService = new google.maps.DirectionsService();
-    var map;
+    (function (w, d, $) {
+        var screenWidth = Math.max(d.documentElement.clientWidth, w.innerWidth || 0);
+        var zoom = screenWidth >= 992 ? 13 : 12;
 
-    function initialize() {
-        directionsDisplay = new google.maps.DirectionsRenderer();
-        
-        var mapOptions = {
-            zoom: 14,
-            center: watersideLoc
+        function initialize() {
+            var mapOptions = {
+                zoom : zoom,
+                center : new google.maps.LatLng(40.777364, -74.0100305)
+            };
+            var map = new google.maps.Map(document.getElementById("venue-map"), mapOptions);
+
+            var watersideMarker = new google.maps.Marker({
+                position : new google.maps.LatLng(40.795952, -73.996317),
+                title : "Waterside Restaurant",
+                map : map,
+                icon : "images/wedding.png"
+            });
+
+            var sheratonMarker = new google.maps.Marker({
+                position : new google.maps.LatLng(40.758776, -74.023744),
+                title : "Sheraton Lincoln Harbor",
+                map : map,
+                icon : "images/hotel.png"
+            });
+
+            var watersideInfo = new google.maps.InfoWindow({
+                content : "<a href='http://watersiderestaurantandcatering.com'>Waterside Restaurant</a><br/>" +
+                "7800 River Rd<br/>" +
+                "North Bergen, NJ 07047<br/>" +
+                "(201) 861-7767<br/>"
+            });
+
+            var sheratonInfo = new google.maps.InfoWindow({
+                content : $("<div style='height: 120px;'><a href='http://www.sheratonlincolnharbor.com'>Sheraton Lincoln Harbor Hotel</a><br/>" +
+                "500 Harbor Blvd<br/>" +
+                "Weehawken, NJ 07086<br/>" +
+                "(201) 617-5600<br/></div>")[0]
+            });
+
+            google.maps.event.addListener(watersideMarker, 'click', function () {
+                watersideInfo.open(map, watersideMarker);
+            });
+
+            google.maps.event.addListener(sheratonMarker, 'click', function () {
+                sheratonInfo.open(map, sheratonMarker);
+            });
         }
-        map = new google.maps.Map(document.getElementById("venue-map"), mapOptions);
-        directionsDisplay.setMap(map);
-        calcRoute();
-    }
 
-    function calcRoute() {
-        var request = {
-            origin: sheratonLoc,
-            destination: watersideLoc,
-            travelMode: google.maps.TravelMode.DRIVING
-        };
-        directionsService.route(request, function(result, status) {
-            if (status == google.maps.DirectionsStatus.OK) {
-                directionsDisplay.setDirections(result);
-            }
-        });
-    }
-
-    google.maps.event.addDomListener(window, 'load', initialize);
+        google.maps.event.addDomListener(window, 'load', initialize);
+    })(window, document, jQuery);
 </script>
 </body>
 </html>
