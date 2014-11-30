@@ -199,7 +199,7 @@
 	#header #header-inner{ width:92%; margin:0 auto; max-width:960px; }
 
 	#header #logo a {
-		width: 130px;
+		width: 5%;
 		float: left;
 		font-family: Clicker Script;
 		font-size: 36px;
@@ -207,8 +207,8 @@
 		text-decoration: none;
 	}
 	
-	#header .left_menu{ display:inline-block; float:left;  width:40%; text-align:right; }
-	#header .right_menu{ display:inline-block; float:left; width:40%; text-align:left; }
+	#header .left_menu{ display:inline-block; float:left;  width:45%; text-align:right; }
+	#header .right_menu{ display:inline-block; float:left; width:45%; text-align:left; }
 	
 /* Nav
 ================================================== */	
@@ -228,7 +228,7 @@
 		padding:0 10px 19px 10px;
 		text-decoration:none;
 		color:#bcb6b6;
-		font-size:0.8vw;
+		font-size:1.1vw;
 		font-weight:400;
 		text-transform:uppercase;
 		
@@ -262,7 +262,7 @@
 		padding:8px 15px;
 		text-decoration:none;
 		color:#333333;
-		font-size:0.8vw;
+		font-size:1.1vw;
 		font-weight:400;
 		text-transform:capitalize;
 		text-align: left;
@@ -282,7 +282,7 @@
 	
 	.main-nav a.current-page{
         color: black;
-        font-size: 0.9vw;
+        font-size: 1.2vw;
     }
 
 /* TITLE
