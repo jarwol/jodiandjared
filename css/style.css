@@ -228,7 +228,7 @@
 		padding:0 10px 19px 10px;
 		text-decoration:none;
 		color:#bcb6b6;
-		font-size:1.1vw;
+		font-size:0.85vw;
 		font-weight:400;
 		text-transform:uppercase;
 		
@@ -262,7 +262,7 @@
 		padding:8px 15px;
 		text-decoration:none;
 		color:#333333;
-		font-size:1.1vw;
+		font-size:0.85vw;
 		font-weight:400;
 		text-transform:capitalize;
 		text-align: left;
@@ -282,7 +282,7 @@
 	
 	.main-nav a.current-page{
         color: black;
-        font-size: 1.2vw;
+        font-size: 1.1vw;
     }
 
 /* TITLE
